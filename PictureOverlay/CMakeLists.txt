@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 2.8)
+project( PictureOverlay )
+find_package( OpenCV REQUIRED )
+add_executable( PictureOverlay ./src/PictureOverlay.cpp )
+target_link_libraries( PictureOverlay ${OpenCV_LIBS} )

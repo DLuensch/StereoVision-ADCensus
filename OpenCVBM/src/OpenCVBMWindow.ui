@@ -1,0 +1,1307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>OpenCVBM</class>
+ <widget class="QMainWindow" name="OpenCVBM">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>601</width>
+    <height>485</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>OpenCVBM - Params</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="BMParameter">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>181</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="cb_auto_update">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>10</y>
+      <width>111</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>auto-update</string>
+    </property>
+    <property name="checked">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pb_update">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>430</y>
+      <width>581</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Update</string>
+    </property>
+   </widget>
+   <widget class="QTabWidget" name="tb_bm">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>581</width>
+      <height>411</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="tab_bm">
+     <attribute name="title">
+      <string>BM-Paramter</string>
+     </attribute>
+     <widget class="QFrame" name="frame">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>561</width>
+        <height>361</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QSlider" name="Slider_PreFilterCap">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>10</y>
+         <width>311</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="minimum">
+        <number>1</number>
+       </property>
+       <property name="maximum">
+        <number>63</number>
+       </property>
+       <property name="value">
+        <number>31</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="QLabel" name="PreFilterCap">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>10</y>
+         <width>111</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>PreFilterCap</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="SADWindowSize">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>90</y>
+         <width>131</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>SADWindowSize</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="NumberOfDisparities">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>170</y>
+         <width>161</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>NumberOfDisparities</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="TextureThreshold">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>210</y>
+         <width>131</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>TextureThreshold</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="UniquenessRatio">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>250</y>
+         <width>131</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>UniquenessRatio</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="SpeckleWindowSize">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>290</y>
+         <width>171</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>SpeckleWindowSize</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="SpeckleRange">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>330</y>
+         <width>111</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>SpeckleRange</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="PreFilterSize">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>50</y>
+         <width>111</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>PreFilterSize</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="MinDisparity">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>130</y>
+         <width>111</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>MinDisparity</string>
+       </property>
+      </widget>
+      <widget class="QSlider" name="Slider_PreFilterSize">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>50</y>
+         <width>311</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="minimum">
+        <number>5</number>
+       </property>
+       <property name="maximum">
+        <number>255</number>
+       </property>
+       <property name="singleStep">
+        <number>2</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="QSlider" name="Slider_MinDisparity">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>130</y>
+         <width>311</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="minimum">
+        <number>-100</number>
+       </property>
+       <property name="maximum">
+        <number>100</number>
+       </property>
+       <property name="value">
+        <number>0</number>
+       </property>
+       <property name="sliderPosition">
+        <number>0</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="QSlider" name="Slider_SADWindowSize">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>90</y>
+         <width>311</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="minimum">
+        <number>5</number>
+       </property>
+       <property name="maximum">
+        <number>255</number>
+       </property>
+       <property name="value">
+        <number>9</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="QSlider" name="Slider_NumberOfDisparities">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>170</y>
+         <width>311</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="minimum">
+        <number>16</number>
+       </property>
+       <property name="maximum">
+        <number>256</number>
+       </property>
+       <property name="singleStep">
+        <number>16</number>
+       </property>
+       <property name="pageStep">
+        <number>16</number>
+       </property>
+       <property name="value">
+        <number>48</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="tickPosition">
+        <enum>QSlider::TicksBelow</enum>
+       </property>
+       <property name="tickInterval">
+        <number>16</number>
+       </property>
+      </widget>
+      <widget class="QSlider" name="Slider_TextureThreshold">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>210</y>
+         <width>311</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="maximum">
+        <number>500</number>
+       </property>
+       <property name="value">
+        <number>10</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="QSlider" name="Slider_UniquenessRatio">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>250</y>
+         <width>311</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="maximum">
+        <number>100</number>
+       </property>
+       <property name="value">
+        <number>15</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="QSlider" name="Slider_SpeckleWindowSize">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>290</y>
+         <width>311</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="maximum">
+        <number>255</number>
+       </property>
+       <property name="value">
+        <number>100</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="QSlider" name="Slider_SpeckleRange">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>330</y>
+         <width>311</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="maximum">
+        <number>100</number>
+       </property>
+       <property name="value">
+        <number>32</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="tickPosition">
+        <enum>QSlider::NoTicks</enum>
+       </property>
+       <property name="tickInterval">
+        <number>0</number>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_PreFilterCap">
+       <property name="geometry">
+        <rect>
+         <x>500</x>
+         <y>10</y>
+         <width>51</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_PreFilterSize">
+       <property name="geometry">
+        <rect>
+         <x>500</x>
+         <y>50</y>
+         <width>51</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_MinDisparity">
+       <property name="geometry">
+        <rect>
+         <x>500</x>
+         <y>130</y>
+         <width>51</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_SADWindowSize">
+       <property name="geometry">
+        <rect>
+         <x>500</x>
+         <y>90</y>
+         <width>51</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_NumberOfDisparities">
+       <property name="geometry">
+        <rect>
+         <x>500</x>
+         <y>170</y>
+         <width>51</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_TextureThreshold">
+       <property name="geometry">
+        <rect>
+         <x>500</x>
+         <y>210</y>
+         <width>51</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_UniquenessRatio">
+       <property name="geometry">
+        <rect>
+         <x>500</x>
+         <y>250</y>
+         <width>51</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_SpeckleWindowSize">
+       <property name="geometry">
+        <rect>
+         <x>500</x>
+         <y>290</y>
+         <width>51</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_SpeckleRange">
+       <property name="geometry">
+        <rect>
+         <x>500</x>
+         <y>330</y>
+         <width>51</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_sgbm">
+     <attribute name="title">
+      <string>SGBM-Paramter</string>
+     </attribute>
+     <widget class="QFrame" name="frame_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>561</width>
+        <height>361</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QLabel" name="NumberOfDisparitiesSG">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>50</y>
+         <width>161</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>NumberOfDisparities</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="UniquenessRatioSG">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>90</y>
+         <width>131</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>UniquenessRatio</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="SpeckleWindowSizeSG">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>130</y>
+         <width>171</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>SpeckleWindowSize</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="SpeckleRangeSG">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>170</y>
+         <width>111</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>SpeckleRange</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="MinDisparitySG">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>10</y>
+         <width>111</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>MinDisparity</string>
+       </property>
+      </widget>
+      <widget class="QSlider" name="Slider_MinDisparitySG">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>10</y>
+         <width>311</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="minimum">
+        <number>-100</number>
+       </property>
+       <property name="maximum">
+        <number>100</number>
+       </property>
+       <property name="value">
+        <number>0</number>
+       </property>
+       <property name="sliderPosition">
+        <number>0</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="QSlider" name="Slider_NumberOfDisparitiesSG">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>50</y>
+         <width>311</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="minimum">
+        <number>16</number>
+       </property>
+       <property name="maximum">
+        <number>256</number>
+       </property>
+       <property name="singleStep">
+        <number>16</number>
+       </property>
+       <property name="pageStep">
+        <number>16</number>
+       </property>
+       <property name="value">
+        <number>48</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="tickPosition">
+        <enum>QSlider::TicksBelow</enum>
+       </property>
+       <property name="tickInterval">
+        <number>16</number>
+       </property>
+      </widget>
+      <widget class="QSlider" name="Slider_UniquenessRatioSG">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>90</y>
+         <width>311</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="maximum">
+        <number>100</number>
+       </property>
+       <property name="value">
+        <number>15</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="QSlider" name="Slider_SpeckleWindowSizeSG">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>130</y>
+         <width>311</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="maximum">
+        <number>255</number>
+       </property>
+       <property name="value">
+        <number>100</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="QSlider" name="Slider_SpeckleRangeSG">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>170</y>
+         <width>311</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="maximum">
+        <number>100</number>
+       </property>
+       <property name="value">
+        <number>32</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="tickPosition">
+        <enum>QSlider::NoTicks</enum>
+       </property>
+       <property name="tickInterval">
+        <number>0</number>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_MinDisparitySG">
+       <property name="geometry">
+        <rect>
+         <x>500</x>
+         <y>10</y>
+         <width>51</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_NumberOfDisparitiesSG">
+       <property name="geometry">
+        <rect>
+         <x>500</x>
+         <y>50</y>
+         <width>51</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_UniquenessRatioSG">
+       <property name="geometry">
+        <rect>
+         <x>500</x>
+         <y>90</y>
+         <width>51</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_SpeckleWindowSizeSG">
+       <property name="geometry">
+        <rect>
+         <x>500</x>
+         <y>130</y>
+         <width>51</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_SpeckleRangeSG">
+       <property name="geometry">
+        <rect>
+         <x>500</x>
+         <y>170</y>
+         <width>51</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_SADWindowSizeSG">
+       <property name="geometry">
+        <rect>
+         <x>500</x>
+         <y>200</y>
+         <width>51</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QSlider" name="Slider_SADWindowSizeSG">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>200</y>
+         <width>311</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="minimum">
+        <number>5</number>
+       </property>
+       <property name="maximum">
+        <number>255</number>
+       </property>
+       <property name="value">
+        <number>9</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="QLabel" name="SADWindowSizeSG">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>200</y>
+         <width>131</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>SADWindowSize</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="pb_reset">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>10</y>
+      <width>71</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>reset</string>
+    </property>
+   </widget>
+   <zorder>BMParameter</zorder>
+   <zorder>pb_update</zorder>
+   <zorder>tb_bm</zorder>
+   <zorder>pb_reset</zorder>
+   <zorder>cb_auto_update</zorder>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>601</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionSave_Image"/>
+    <addaction name="actionSave_Disparity"/>
+    <addaction name="separator"/>
+    <addaction name="actionQuit"/>
+   </widget>
+   <addaction name="menuFile"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionSave_Image">
+   <property name="text">
+    <string>Save Image</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionQuit">
+   <property name="text">
+    <string>Quit</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="actionSave_Disparity">
+   <property name="text">
+    <string>Save Disparity</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+D</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>Slider_MinDisparity</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>OpenCVBM</receiver>
+   <slot>slot_slider_MinDisparity(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>347</x>
+     <y>216</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>307</x>
+     <y>225</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Slider_PreFilterCap</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>OpenCVBM</receiver>
+   <slot>slot_slider_PreFilterCap(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>347</x>
+     <y>116</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>307</x>
+     <y>225</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Slider_PreFilterSize</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>OpenCVBM</receiver>
+   <slot>slot_slider_PreFilterSize(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>347</x>
+     <y>156</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>307</x>
+     <y>225</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Slider_SADWindowSize</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>OpenCVBM</receiver>
+   <slot>slot_slider_SADWindowSize(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>347</x>
+     <y>196</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>307</x>
+     <y>225</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Slider_SpeckleRange</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>OpenCVBM</receiver>
+   <slot>slot_slider_SpeckleRange(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>347</x>
+     <y>436</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>307</x>
+     <y>225</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Slider_SpeckleWindowSize</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>OpenCVBM</receiver>
+   <slot>slot_slider_SpeckleWindowSize(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>347</x>
+     <y>396</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>307</x>
+     <y>225</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Slider_TextureThreshold</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>OpenCVBM</receiver>
+   <slot>slot_slider_TextureThreshold(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>347</x>
+     <y>316</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>307</x>
+     <y>225</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Slider_UniquenessRatio</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>OpenCVBM</receiver>
+   <slot>slot_slider_UniquenessRatio(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>347</x>
+     <y>356</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>307</x>
+     <y>225</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Slider_NumberOfDisparities</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>OpenCVBM</receiver>
+   <slot>slot_slider_NumberOfDisparities(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>347</x>
+     <y>276</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>307</x>
+     <y>225</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cb_auto_update</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>OpenCVBM</receiver>
+   <slot>slot_auto_update(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>525</x>
+     <y>45</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>300</x>
+     <y>239</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pb_update</sender>
+   <signal>clicked()</signal>
+   <receiver>OpenCVBM</receiver>
+   <slot>slot_update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>300</x>
+     <y>473</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>300</x>
+     <y>239</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Slider_MinDisparitySG</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>OpenCVBM</receiver>
+   <slot>slot_slider_MinDisparitySG(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>357</x>
+     <y>101</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>300</x>
+     <y>242</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Slider_NumberOfDisparitiesSG</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>OpenCVBM</receiver>
+   <slot>slot_slider_NumberOfDisparitiesSG(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>357</x>
+     <y>141</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>300</x>
+     <y>242</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Slider_UniquenessRatioSG</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>OpenCVBM</receiver>
+   <slot>slot_slider_UniquenessRatioSG(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>357</x>
+     <y>181</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>300</x>
+     <y>242</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Slider_SpeckleWindowSizeSG</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>OpenCVBM</receiver>
+   <slot>slot_slider_SpeckleWindowSizeSG(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>357</x>
+     <y>221</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>300</x>
+     <y>242</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Slider_SpeckleRangeSG</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>OpenCVBM</receiver>
+   <slot>slot_slider_SpeckleRangeSG(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>357</x>
+     <y>261</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>300</x>
+     <y>242</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Slider_SADWindowSizeSG</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>OpenCVBM</receiver>
+   <slot>slot_slider_SADWindowSizeSG(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>357</x>
+     <y>291</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>300</x>
+     <y>242</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pb_reset</sender>
+   <signal>clicked()</signal>
+   <receiver>OpenCVBM</receiver>
+   <slot>slot_reset()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>405</x>
+     <y>48</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>300</x>
+     <y>242</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>tb_bm</sender>
+   <signal>currentChanged(int)</signal>
+   <receiver>OpenCVBM</receiver>
+   <slot>slot_bmtab_changed(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>300</x>
+     <y>240</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>300</x>
+     <y>242</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionSave_Image</sender>
+   <signal>triggered()</signal>
+   <receiver>OpenCVBM</receiver>
+   <slot>slot_save_image()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>300</x>
+     <y>242</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionQuit</sender>
+   <signal>triggered()</signal>
+   <receiver>OpenCVBM</receiver>
+   <slot>slot_quit()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>300</x>
+     <y>242</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionSave_Disparity</sender>
+   <signal>triggered()</signal>
+   <receiver>OpenCVBM</receiver>
+   <slot>slot_save_disparity()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>300</x>
+     <y>242</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>slot_slider_PreFilterCap(int)</slot>
+  <slot>slot_slider_PreFilterSize(int)</slot>
+  <slot>slot_slider_MinDisparity(int)</slot>
+  <slot>slot_slider_SADWindowSize(int)</slot>
+  <slot>slot_slider_NumberOfDisparities(int)</slot>
+  <slot>slot_slider_TextureThreshold(int)</slot>
+  <slot>slot_slider_UniquenessRatio(int)</slot>
+  <slot>slot_slider_SpeckleWindowSize(int)</slot>
+  <slot>slot_slider_SpeckleRange(int)</slot>
+  <slot>slot_auto_update(int)</slot>
+  <slot>slot_update()</slot>
+  <slot>slot_slider_MinDisparitySG(int)</slot>
+  <slot>slot_slider_SADWindowSizeSG(int)</slot>
+  <slot>slot_slider_NumberOfDisparitiesSG(int)</slot>
+  <slot>slot_slider_UniquenessRatioSG(int)</slot>
+  <slot>slot_slider_SpeckleWindowSizeSG(int)</slot>
+  <slot>slot_slider_SpeckleRangeSG(int)</slot>
+  <slot>slot_reset()</slot>
+  <slot>slot_bmtab_changed(int)</slot>
+  <slot>slot_save_image()</slot>
+  <slot>slot_quit()</slot>
+ </slots>
+</ui>
