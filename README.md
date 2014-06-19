@@ -22,13 +22,13 @@ With this program you can calculate the intrinsic and extrinsinc parameters of y
 
 ### Building and execution on a linux based system
 
-**Build the program on:**
+**Build the program:**
  1. Navigate into the "IntrinsicExtrinsicCalib" folder
  2. `mkdir build`
  3. `cd build`
  4. `cmake ..`
  5. `make`
- 6. If you can build the program you should see 2 files called "intrisic" and "extrinsic"
+ 6. If you can build the program you should be able to see the 2 executable "intrisic" and "extrinsic"
 
 **Execute the intrinsic:**
  1.  Create a "intrinsicConfig.cfg" as you can see in the sample folder. (e.g.: configIntrinsicLeft.cfg, configIntrinsicRight.cfg)
@@ -44,7 +44,22 @@ With this program you can calculate the intrinsic and extrinsinc parameters of y
  5.  Control the translation vector in the resulting 4x4 matrix. This should match the distance between the cameras in the selected measuring unit.
 
 # ImageRectify 
-What does the program do and how I use it? Comming soon!
+With this program you can easy rectify new images which are taken with a calibrated stereo camera system. You need the intrinsic calibration from each camera and the extrinsic calibration for the stereo system. All the calibrations can be estimated with "IntrinsicExtrinsicCalib".
+
+### Building and execution on a linux based system
+
+**Build the program:**
+ 1. Navigate into the "ImageRectify" folder
+ 2. `mkdir build`
+ 3. `cd build`
+ 4. `cmake ..`
+ 5. `make`
+ 6. If you can build the program you should be able to see the executable "ImageRectify"
+
+**Execute the image rectification:**
+ 1.  Create a "config.cfg" as you can see in the sample folder.
+ 2.  Create a "images.xml" as you can see in the sample folder.
+ 3.  Execute the image rectification: `./ImageRectify PATH_TO_YOUR_CONFIG/config.cfg`
 
 # ADCensusBM 
 What does the program do and how I use it? Comming soon!
