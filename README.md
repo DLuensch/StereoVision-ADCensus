@@ -33,13 +33,13 @@ With this program you can calculate the intrinsic and extrinsinc parameters of y
 **Execute the intrinsic:**
  1.  Create a "intrinsicConfig.cfg" as you can see in the sample folder. (e.g.: configIntrinsicLeft.cfg, configIntrinsicRight.cfg)
  2.  Create a "intrinsicImages.xml" as you can see in the sample folder. (e.g.: imagesLeftIntrinsic.xml, imagesRightIntrinsic.xml)
- 3.  Execute the intrisic calibration: `./intrinsic PATH_TO_YOUR_CONFIG/config.cfg`
+ 3.  Execute the intrisic calibration: `./intrinsic PATH_TO_YOUR_CONFIG/intrinsicConfig.cfg`
  4.  This can take several minutes. Control your calibration result in your destination folder!
   
 **Execute the extrinsic:** 
  1.  Create a "extrinsicConfig.cfg" as you can see in the sample folder. (e.g.: configExtrinsic.cfg)
  2.  Create a "extrinsicImages.xml" as you can see in the sample folder. (e.g.: imagesExtrinsic.xml)
- 3.  Execute the extrinsic calibration: `./extrinsic PATH_TO_YOUR_CONFIG/config.cfg`
+ 3.  Execute the extrinsic calibration: `./extrinsic PATH_TO_YOUR_CONFIG/extrinsicConfig.cfg`
  4.  This can take several minutes. Control your calibration result in your destination folder!
  5.  Control the translation vector in the resulting 4x4 matrix. This should match the distance between the cameras in the selected measuring unit.
 
