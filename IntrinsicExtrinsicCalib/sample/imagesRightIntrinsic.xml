@@ -1,28 +1,9 @@
 <?xml version="1.0"?>
 <opencv_storage>
 <imagelist>
-../sample/20131218_cam_5mp-m_intrinsic/01_right_5mp-m.JPG 
-../sample/20131218_cam_5mp-m_intrinsic/02_right_5mp-m.JPG 
-../sample/20131218_cam_5mp-m_intrinsic/03_right_5mp-m.JPG 
-../sample/20131218_cam_5mp-m_intrinsic/04_right_5mp-m.JPG 
-../sample/20131218_cam_5mp-m_intrinsic/05_right_5mp-m.JPG 
-../sample/20131218_cam_5mp-m_intrinsic/06_right_5mp-m.JPG 
-../sample/20131218_cam_5mp-m_intrinsic/07_right_5mp-m.JPG 
-../sample/20131218_cam_5mp-m_intrinsic/08_right_5mp-m.JPG 
-../sample/20131218_cam_5mp-m_intrinsic/09_right_5mp-m.JPG 
-../sample/20131218_cam_5mp-m_intrinsic/10_right_5mp-m.JPG 
-../sample/20131218_cam_5mp-m_intrinsic/11_right_5mp-m.JPG 
-../sample/20131218_cam_5mp-m_intrinsic/12_right_5mp-m.JPG 
-../sample/20131218_cam_5mp-m_intrinsic/13_right_5mp-m.JPG 
-../sample/20131218_cam_5mp-m_intrinsic/14_right_5mp-m.JPG 
-../sample/20131218_cam_5mp-m_intrinsic/15_right_5mp-m.JPG 
-../sample/20131218_cam_5mp-m_intrinsic/16_right_5mp-m.JPG 
-../sample/20131218_cam_5mp-m_intrinsic/17_right_5mp-m.JPG 
-../sample/20131218_cam_5mp-m_intrinsic/18_right_5mp-m.JPG 
-../sample/20131218_cam_5mp-m_intrinsic/19_right_5mp-m.JPG 
-../sample/20131218_cam_5mp-m_intrinsic/20_right_5mp-m.JPG 
-../sample/20131218_cam_5mp-m_intrinsic/21_right_5mp-m.JPG 
-../sample/20131218_cam_5mp-m_intrinsic/22_right_5mp-m.JPG 
+Path_to_your_Images/Image_1_right_camera.jpg 
+Path_to_your_Images/Image_2_right_camera.jpg 
+Path_to_your_Images/Image_3_right_camera.jpg .. and so on ...
 </imagelist>
 </opencv_storage>
 
