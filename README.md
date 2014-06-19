@@ -63,9 +63,9 @@ With this program you can easy rectify new images which are taken with a calibra
  4.  Execute the image rectification: `./ImageRectify PATH_TO_YOUR_CONFIG/config.cfg`
 
 # ADCensusBM 
-This program creates the disparity map for a given rectified image set. The used algorithm is called ADCensus. You can find the paper in the "Documents" section. The actual implemention only uses OpenMP for parallelization and not your grafics cards for what the algorithm is designed for. But of course of the usage of the OpenCV it would be not so hard to change.
+This program creates the disparity map for a given rectified imageset. The used algorithm is called ADCensus. You can find the paper in the "Documents" section. The actual implemention only uses OpenMP for parallelization and not your grafics cards for what the algorithm is designed for. But of course of the usage of the OpenCV it would be not so hard to change.
 
-The program creates a point cloud if you have a extrinsic calibration file for your images. Otherwise create a empty file and set this in the config as you can see in the sample folder. If no extrinsic exists only the depth maps will be created.
+The program creates a point cloud if you have a extrinsic calibration file for your images. Otherwise create an empty file and set this in the config as you can see in the sample folder. If no extrinsic exists only the depth maps will be created.
 
 You can see the results and evalution of the algorithm here: http://vision.middlebury.edu/stereo/eval/
 
@@ -78,9 +78,9 @@ You can see the results and evalution of the algorithm here: http://vision.middl
  6. If you can build the program you should be able to see the executable "ADCensusBM"
 
 **Execute the image rectification:**
- 1.  Copy and edit the "config.cfg" from the sample folder.
+ 1.  Copy and edit the "config.cfg" from the sample folder. The values in the "config.cfg" are for the middleburry imageset. The values also work with other images but specific values for your own dataset can improve the quallity.
  2.  Create a "images.xml" as you can see in the sample folder.
- 4.  Execute the image rectification: `./ImageRectify PATH_TO_YOUR_CONFIG/config.cfg`
+ 4.  Execute the image rectification: `./ADCensusBM PATH_TO_YOUR_CONFIG/config.cfg`
 
 # PictureOverlay 
 What does the program do and how I use it? Comming soon!
