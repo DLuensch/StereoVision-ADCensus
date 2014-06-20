@@ -80,10 +80,26 @@ You can see the results and evalution of the algorithm here: http://vision.middl
 **Execute the image rectification:**
  1.  Copy and edit the "config.cfg" from the sample folder. The values in the "config.cfg" are for the middleburry imageset. The values also work with other images but specific values for your own dataset can improve the quallity.
  2.  Create a "images.xml" as you can see in the sample folder.
- 4.  Execute the image rectification: `./ADCensusBM PATH_TO_YOUR_CONFIG/config.cfg`
+ 3.  Execute the image rectification: `./ADCensusBM PATH_TO_YOUR_CONFIG/config.cfg`
 
 # PictureOverlay 
-What does the program do and how I use it? Comming soon!
+It's a small tool to check the accuracy of your calibrations and the disparities in the scene. The program simply overlays 2 corresponding images from the left and right camera and display them. Then you can move one image (the first) and check if objects layes on the same epipolar lines. Further you can check the disparity between the objects.
+
+**Build the program:**
+ 1. Navigate into the "PictureOverlay" folder
+ 2. `mkdir build`
+ 3. `cd build`
+ 4. `cmake ..`
+ 5. `make`
+ 6. If you can build the program you should be able to see the executable "PictureOverlay"
+
+**Execute PictureOverlay:**
+* `./PictureOverlay PATH_TO_YOUR_CONFIG/image1.jpg PATH_TO_YOUR_CONFIG/image1.jpg alpha1 alpha2 scale`
+** alpha1: Is the alpha value for the first image. The value must be between 0 - 1. (e.g.: 0.5)
+** alpha2: Is the alpha value for the second image. The value must be between 0 - 1. (e.g.: 0.5)
+** scale: If you have large images which are bigger than your screen resolution than you can reduce the size with this parameter. The value must be between 0 - 1. If your don't want to reduce the size set the value to 1.
+** With the keys "A" and "D" you can move the first image left and right.
+** With the keys "W" and "S" you can move the first image up and down.
 
 # OpenCVBM 
 What does the program do and how I use it? Comming soon!
