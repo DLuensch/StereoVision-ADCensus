@@ -96,7 +96,7 @@ It's a small tool to check the accuracy of your calibrations and the disparities
  6. If you can build the program you should be able to see the executable "PictureOverlay"
 
 **Execute PictureOverlay:**
- 1. `./PictureOverlay PATH_TO_YOUR_CONFIG/image1.jpg PATH_TO_YOUR_CONFIG/image1.jpg alpha1 alpha2 scale`
+ 1. `./PictureOverlay PATH_TO_YOUR_CONFIG/image1.jpg PATH_TO_YOUR_CONFIG/image2.jpg alpha1 alpha2 scale`
   * alpha1: Is the alpha value for the first image. The value must be between 0 - 1. (e.g.: 0.5)
   * alpha2: Is the alpha value for the second image. The value must be between 0 - 1. (e.g.: 0.5)
   * scale: If you have large images which are bigger than your screen resolution than you can reduce the size with this parameter. The value must be between 0 - 1. If your don't want to reduce the size set the value to 1.
