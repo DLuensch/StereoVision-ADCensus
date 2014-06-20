@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
 <opencv_storage>
 <imagelist>
-../sample/testbilder/01left_picture.png
-../sample/testbilder/01right_picture.png
-../sample/testbilder/02left_picture.png
-../sample/testbilder/02right_picture.png
-../sample/testbilder/03left_picture.png
-../sample/testbilder/03right_picture.png
-../sample/testbilder/04left_picture.png
-../sample/testbilder/04right_picture.png
+../sample/test_images/01left_picture.png
+../sample/test_images/01right_picture.png
+../sample/test_images/02left_picture.png
+../sample/test_images/02right_picture.png
+../sample/test_images/03left_picture.png
+../sample/test_images/03right_picture.png
+../sample/test_images/04left_picture.png
+../sample/test_images/04right_picture.png
 </imagelist>
 </opencv_storage>
 
