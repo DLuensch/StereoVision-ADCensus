@@ -65,9 +65,9 @@ With this program you can easy rectify new images which are taken with a calibra
  4.  Execute the image rectification: `./ImageRectify PATH_TO_YOUR_CONFIG/config.cfg`
 
 # ADCensusBM 
-This program creates the disparity map for a given rectified image set with the use of the ADCensus algorithm. You can find the paper in the "Documents" section or [here](./Documents/ADCensus.pdf). The current implementation doesn't use your graphics card for what the algorithm is designed for but rather openmp for parallelization. But of course of the usage of the OpenCV it would be not so hard to change.
+This program creates the disparity map for a given rectified image set with the use of the ADCensus algorithm. You can find the paper in the "Documents" section or [here](./Documents/ADCensus.pdf). The current implementation doesn't use your graphics card for parallelization, for what the algorithm is designed for, but rather it makes use of OpenMP. By using the OpenCV it should be easy to make a port to the graphics card.
 
-The program creates a point cloud if you have a extrinsic calibration file for your images. Otherwise create an empty file and set this in the config as you can see in the sample folder. If no extrinsic exists only the depth maps will be created.
+If you have an extrinsic calibration file for your images the program creates a point cloud. Otherwise create an empty extrinsic file and change the config as you can see in the sample folder. Only the depth maps will be created, if no extrinsic exists. In any case, the input images must be rectified!
 
 You can see the results and evalution of the algorithm here: http://vision.middlebury.edu/stereo/eval/
 
