@@ -31,7 +31,7 @@ With this program you can calculate the intrinsic and extrinsinc parameters of y
  3. `cd build`
  4. `cmake ..`
  5. `make`
- 6. If build the program successfully you should be able to see the "intrisic" and "extrinsic" executables.
+ 6. If you build the program successfully you should be able to see the "intrisic" and "extrinsic" executables.
 
 **Execute the intrinsic:**
  1.  Create a "intrinsicConfig.cfg" as you can see in the sample folder. (e.g.: configIntrinsicLeft.cfg, configIntrinsicRight.cfg)
@@ -57,7 +57,7 @@ With this program you can easy rectify new images which are taken with a calibra
  3. `cd build`
  4. `cmake ..`
  5. `make`
- 6. If build the program successfully you should be able to see the "ImageRectify" executable.
+ 6. If you build the program successfully you should be able to see the "ImageRectify" executable.
 
 **Execute the image rectification:**
  1.  Create a "config.cfg" as you can see in the sample folder.
@@ -67,7 +67,7 @@ With this program you can easy rectify new images which are taken with a calibra
 # ADCensusBM 
 This program creates the disparity map for a given rectified image set with the use of the ADCensus algorithm. You can find the paper in the "Documents" section or [here](./Documents/ADCensus.pdf). The current implementation doesn't use your graphics card for parallelization, for what the algorithm is designed for, but rather it makes use of OpenMP. By using the OpenCV it should be easy to make a port to the graphics card.
 
-If you have an extrinsic calibration file for your images the program creates a point cloud. Otherwise create an empty extrinsic file and change the config as you can see in the sample folder. Only the depth maps will be created, if no extrinsic exists. In any case, the input images must be rectified!
+If you have an extrinsic calibration file for your images the program creates a point cloud. Otherwise create an empty extrinsic file and change the specific parameter in the config as you can see in the sample folder. Only the depth maps will be created if no extrinsic exists. In any case, the input images must be rectified!
 
 You can see the results and evalution of the algorithm here: http://vision.middlebury.edu/stereo/eval/
 
@@ -77,15 +77,15 @@ You can see the results and evalution of the algorithm here: http://vision.middl
  3. `cd build`
  4. `cmake ..`
  5. `make`
- 6. If build the program successfully you should be able to see the "ADCensusBM" executable.
+ 6. If you build the program successfully you should be able to see the "ADCensusBM" executable.
 
 **Execute the image rectification:**
- 1.  Copy and edit the "config.cfg" from the sample folder. The values in the "config.cfg" are for the middleburry imageset. The values also work with other images but specific values for your own dataset can improve the quallity.
+ 1.  Copy and edit the "config.cfg" from the sample folder. The values in the "config.cfg" are for the middleburry image set. The values also work with other images but specific values for your own dataset can improve the quallity.
  2.  Create a "images.xml" as you can see in the sample folder.
  3.  Execute the image rectification: `./ADCensusBM PATH_TO_YOUR_CONFIG/config.cfg`
 
 # PictureOverlay 
-It's a small tool to check the accuracy of your calibrations and the disparities in the scene. The program simply overlays 2 corresponding images from the left and right camera and display them. Then you can move one image (the first) and check if objects layes on the same epipolar lines. Further you can check the disparity between the objects.
+It's a small tool to check the accuracy of your calibrations and the disparities in the scene. The program simply overlays 2 corresponding images from the left and right camera and display them. Afterwards you can move one image (the first one) and check if objects layes on the same epipolar lines. Further you can check the disparity between the objects.
 
 **Build the program:**
  1. Navigate into the "PictureOverlay" folder
@@ -93,15 +93,15 @@ It's a small tool to check the accuracy of your calibrations and the disparities
  3. `cd build`
  4. `cmake ..`
  5. `make`
- 6. If build the program successfully you should be able to see the "PictureOverlay" executable
+ 6. If you build the program successfully you should be able to see the "PictureOverlay" executable
 
 **Execute PictureOverlay:**
  1. `./PictureOverlay PATH_TO_YOUR_CONFIG/image1.jpg PATH_TO_YOUR_CONFIG/image2.jpg alpha1 alpha2 scale`
-  * alpha1: Is the alpha value for the first image. The value must be between 0 - 1. (e.g.: 0.5)
-  * alpha2: Is the alpha value for the second image. The value must be between 0 - 1. (e.g.: 0.5)
-  * scale: If you have large images which are bigger than your screen resolution than you can reduce the size with this parameter. The value must be between 0 - 1. If your don't want to reduce the size set the value to 1.
-  * With the keys "A" and "D" you can move the first image left and right.
-  * With the keys "W" and "S" you can move the first image up and down.
+  * alpha1: The alpha value for the first image. The value must be between 0 - 1. (e.g.: 0.5)
+  * alpha2: The alpha value for the second image. The value must be between 0 - 1. (e.g.: 0.5)
+  * scale: You can reduce the size with this parameter if you have images bigger than your screen resolution. The value must be between 0 and 1. If you don't want to reduce the size, set the value to 1.
+  * With the "A" and "D" keys you can move the first image left and right.
+  * With the "W" and "S" keys you can move the first image up and down.
 
 # OpenCVBM 
 What does the program do and how I use it? Comming soon!
