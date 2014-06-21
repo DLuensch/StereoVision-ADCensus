@@ -21,7 +21,7 @@ Projects in this package:
 * evalDisp 
 
 # IntrinsicExtrinsicCalib
-With this program you can calculate the intrinsic and extrinsinc parameters of your cameras. The calibration requires several images with chessboard pattern in any size, e.g. [Pattern](./Documents/chessboards/Chessboard_A0_18x12_5cm.pdf)18x12 (width x height). In the project we used a 18x12 (only the inner edges count) pattern on a A0 paper. Every calibration is based on about 20 images from different views, distances and angles. It is important that the pattern is visible on every section of the camera sensor! You have to take these images for every camera and calibration step (intrinsic and extrinsic).
+With this program you can calculate the intrinsic and extrinsinc parameters of your cameras. The calibration requires several images with chessboard pattern in any size, e.g. a 8x6 (width x height) [pattern](./Documents/chessboards/Chessboard_A4_8x6_2.65cm.pdf). In the project we used a [18x12](./Documents/chessboards/Chessboard_A0_18x12_5cm.pdf) (only the inner edges count) pattern on a A0 paper. Every calibration is based on about 20 images from different views, distances and angles. It is important that the pattern is visible on every section of the camera sensor! You have to take these images for every camera and calibration step (intrinsic and extrinsic).
 
 ### Building and execution on a linux based system
 
