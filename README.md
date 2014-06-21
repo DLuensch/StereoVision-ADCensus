@@ -104,7 +104,19 @@ It's a small tool to check the accuracy of your calibrations and the disparities
   * With the "W" and "S" keys you can move the first image up and down.
 
 # OpenCVBM 
-What does the program do and how I use it? Comming soon!
+It's a small programm to compare the results from the ADCensus with the builtin block matching methods by the OpenCV, Block-Matching (BM) and Semi-Global Bock-Matching (SGBM). As the input, the programm needs 2 rectified images from a stereo camera system. You're be able to adjust all free parameters for each algorithm and see immediately the results. You have the option to switch the whole time between the 2 algorithms , to compare them.
+
+**Build the program:**
+ 1. Navigate into the "OpenCVBM" folder
+ 2. `mkdir build`
+ 3. `cd build`
+ 4. `cmake ..`
+ 5. `make`
+ 6. If you build the program successfully you should be able to see the "OpenCVBM" executable
+
+**Execute OpenCVBM:**
+ 1. `./OpenCVBM PATH_TO_YOUR_CONFIG/image1.jpg PATH_TO_YOUR_CONFIG/image2.jpg scale`
+  * scale: You can reduce the size with this parameter if you have images bigger than your screen resolution. The value must be between 0 and 1. If you don't want to reduce the size, set the value to 1.
 
 # evalDisp 
 What does the program do and how I use it? Comming soon!
