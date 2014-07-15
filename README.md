@@ -130,7 +130,9 @@ Parameter:
  *  cameraName: Name for the camera
  *  extrinsicFile: Is a file that would be created with "IntrinsicExtrinsicCalib"
  *  imagesXML: Is a OpenCV XML-File that contains the pathes to the images
+  * You need only 1 image from your camera (left or right camera)! 
  *  dispsXML: Is a OpenCV XML-File that contains the pathes to the disparity maps
+  * Attention: You need the .yml disparity maps, which are created by the ADCensus! The disparity map must be the corresspondig file to the image at the imagesXML! See the samples in the project!
  *  scaleFactor: You can reduce the size with this parameter, if you have images bigger than your screen resolution. The value must be between 0 and 1. If you don't want to reduce the size, set the value to 1.
  
 
