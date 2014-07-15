@@ -5,6 +5,8 @@ With the programs in this repository you can calibrate single cameras, a stereo 
 
 Checkout the project in action or see other nice projects: [My YouTube Channel](https://www.youtube.com/channel/UCAFuhxVbThTeVdCI5Owq9dg), [Robalab W-HS YouTube Channel](https://www.youtube.com/channel/UCW6o_Gve9OcTYuVSJYg_NDQ)
 
+[![YouTube project video](http://img.youtube.com/vi/MZsSTpS-XGI/0.jpg)](http://www.youtube.com/watch?v=MZsSTpS-XGI)
+
 Based on the following libraries:
 * OpenCV
 * BOOST
