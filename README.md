@@ -13,6 +13,7 @@ Based on the following libraries:
 * libConfig
 * PCL
 * OpenMP
+* Qt 4.8.X
 
 Projects in this package:
 * IntrinsicExtrinsicCalib
