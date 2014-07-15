@@ -144,7 +144,7 @@ cameras =(
                 dispsXML="PATH_TO_THE_DISPARITY_MAPS/DISPARITY_MAPS.xml";
                 scaleFactor=0.5;
             }
-    }
+    };
 ```
 
 Sample config for a couple of cameras:
@@ -164,7 +164,7 @@ cameras =(
                 dispsXML="PATH_TO_THE_DISPARITY_MAPS/DISPARITY2_MAPS.xml";
                 scaleFactor=0.5;
             }
-    }
+    };
 ```
 
 **Build the program:**
