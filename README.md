@@ -177,7 +177,7 @@ cameras =(
  5. `make`
  6. If you build the program successfully you should be able to see the "evalDisp" executable
 
-**Execute OpenCVBM:**
+**Execute evalDisp:**
  1. `./evalDisp PATH_TO_YOUR_CONFIG/YOUR_CONFIG.jpg`
   * With the "A" and "D" keys you can move the cross left and right.
   * With the "W" and "S" keys you can move the cross up and down.
