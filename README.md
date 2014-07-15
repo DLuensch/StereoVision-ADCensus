@@ -123,9 +123,9 @@ It's a small programm to compare the results from the ADCensus with the builtin 
 # evalDisp 
 With this programm you can evaluate each pixel and see the disparity and the calculated distance for this. All you need are the rectified images, the calculated disparity images and the camera extrinsic. 
 
-**Writing a config file** 
+**Writing a config file:** 
 
-Before you can use the programm you need a config. A sample config is under the "evalDisp/sample". 
+Before you can use the programm you need a config. A sample config is under the "evalDisp/sample"!
 
 Parameter:
  *  cameraName: Name for the camera
