@@ -3,7 +3,7 @@ StereoVision-ADCensus
 This is a master student project realized at the robotics laboratory of the Westphalian University of Applied Science.
 With the programs in this repository you can calibrate single cameras, a stereo system, calculate disparity maps and evaluate your data. It's a all in one package for stereo vision! The software runs under windows and linux and is written in C++.
 
-Checkout the project in action or see other nice projects: [My YouTube Channel](https://www.youtube.com/channel/UCAFuhxVbThTeVdCI5Owq9dg), [Robalab W-HS YouTube Channel](https://www.youtube.com/channel/UCW6o_Gve9OcTYuVSJYg_NDQ)
+Checkout the project in action or see other nice projects: [My YouTube Channel](https://www.youtube.com/user/dluensch/videos), [Robalab W-HS YouTube Channel](https://www.youtube.com/user/RoblabFhGe/videos)
 
 [![YouTube project video](http://img.youtube.com/vi/MZsSTpS-XGI/0.jpg)](http://www.youtube.com/watch?v=MZsSTpS-XGI)
 
