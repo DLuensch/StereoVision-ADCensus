@@ -98,10 +98,10 @@ It's a small tool to check the accuracy of your calibrations and the disparities
  6. If you build the program successfully you should be able to see the "PictureOverlay" executable
 
 **Execute PictureOverlay:**
- 1. `./PictureOverlay PATH_TO_YOUR_CONFIG/image1.jpg PATH_TO_YOUR_CONFIG/image2.jpg alpha1 alpha2 scale`
+ 1. `./PictureOverlay PATH_TO_YOUR_IMAGE/image1.jpg PATH_TO_YOUR_IMAGE/image2.jpg alpha1 alpha2 scale`
   * alpha1: The alpha value for the first image. The value must be between 0 - 1. (e.g.: 0.5)
   * alpha2: The alpha value for the second image. The value must be between 0 - 1. (e.g.: 0.5)
-  * scale: You can reduce the size with this parameter if you have images bigger than your screen resolution. The value must be between 0 and 1. If you don't want to reduce the size, set the value to 1.
+  * scale: You can reduce the size with this parameter, if you have images bigger than your screen resolution. The value must be between 0 and 1. If you don't want to reduce the size, set the value to 1.
   * With the "A" and "D" keys you can move the first image left and right.
   * With the "W" and "S" keys you can move the first image up and down.
 
@@ -117,8 +117,69 @@ It's a small programm to compare the results from the ADCensus with the builtin 
  6. If you build the program successfully you should be able to see the "OpenCVBM" executable
 
 **Execute OpenCVBM:**
- 1. `./OpenCVBM PATH_TO_YOUR_CONFIG/image1.jpg PATH_TO_YOUR_CONFIG/image2.jpg scale`
-  * scale: You can reduce the size with this parameter if you have images bigger than your screen resolution. The value must be between 0 and 1. If you don't want to reduce the size, set the value to 1.
+ 1. `./OpenCVBM PATH_TO_YOUR_IMAGE/image1.jpg PATH_TO_YOUR_IMAGE/image2.jpg scale`
+  * scale: You can reduce the size with this parameter, if you have images bigger than your screen resolution. The value must be between 0 and 1. If you don't want to reduce the size, set the value to 1.
 
 # evalDisp 
-What does the program do and how I use it? Comming soon!
+With this programm you can evaluate each pixel and see the disparity and the calculated distance for this. All you need are the rectified images, the calculated disparity images and the camera extrinsic. 
+
+**Writing a config file** 
+Before you can use the programm you need a config. A sample config is under the "evalDisp/sample". 
+
+Parameter:
+ *  cameraName: Name for the camera
+ *  extrinsicFile: Is a file that would be created with "IntrinsicExtrinsicCalib"
+ *  imagesXML: Is a OpenCV XML-File that contains the pathes to the images
+ *  dispsXML: Is a OpenCV XML-File that contains the pathes to the disparity maps
+ *  scaleFactor: You can reduce the size with this parameter, if you have images bigger than your screen resolution. The value must be between 0 and 1. If you don't want to reduce the size, set the value to 1.
+ 
+
+Sample config 1 camera:
+```
+cameras =(  
+            {
+                cameraName="Sample_Camera";
+                extrinsicFile="PATH_TO_THE_CALCULATED_CAMERA_EXTRINSIC_FILE/CAMERA_EXTRINSIC_FILE.yml";
+				imagesXML="PATH_TO_THE_IMAGE_CONFIG/IMAGE.xml";
+                dispsXML="PATH_TO_THE_DISPARITY_MAPS/DISPARITY_MAPS.xml";
+                scaleFactor=0.5;
+            }
+    }
+```
+
+Sample config for a couple of cameras:
+```
+cameras =(  
+            {
+                cameraName="Sample_Camera_1";
+                extrinsicFile="PATH_TO_THE_CALCULATED_CAMERA_EXTRINSIC_FILE/CAMERA1_EXTRINSIC_FILE.yml";
+				imagesXML="PATH_TO_THE_IMAGE_CONFIG/IMAGE1.xml";
+                dispsXML="PATH_TO_THE_DISPARITY_MAPS/DISPARITY1_MAPS.xml";
+                scaleFactor=0.5;
+            },
+            {
+                cameraName="Sample_Camera_2";
+                extrinsicFile="PATH_TO_THE_CALCULATED_CAMERA_EXTRINSIC_FILE/CAMERA2_EXTRINSIC_FILE.yml";
+				imagesXML="PATH_TO_THE_IMAGE_CONFIG/IMAGE2.xml";
+                dispsXML="PATH_TO_THE_DISPARITY_MAPS/DISPARITY2_MAPS.xml";
+                scaleFactor=0.5;
+            }
+    }
+```
+
+**Build the program:**
+ 1. Navigate into the "evalDisp" folder
+ 2. `mkdir build`
+ 3. `cd build`
+ 4. `cmake ..`
+ 5. `make`
+ 6. If you build the program successfully you should be able to see the "evalDisp" executable
+
+**Execute OpenCVBM:**
+ 1. `./evalDisp PATH_TO_YOUR_CONFIG/YOUR_CONFIG.jpg`
+  * With the "A" and "D" keys you can move the cross left and right.
+  * With the "W" and "S" keys you can move the cross up and down.
+  * With "C" you can toggle between the disparity and the color image.
+  * With "B" and "N" you can go to the previous / next image on your list.
+  * With "H" and "J" you can go to the previous / next camera if exists.
+  * With "Q" or "ESC" you can quit the program. 
