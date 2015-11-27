@@ -112,7 +112,7 @@ public:
 
     void setScale(double scale);
 
-    void setSavePath(string path);
+    void setSavePath(std::string path);
 
 private slots:
 
