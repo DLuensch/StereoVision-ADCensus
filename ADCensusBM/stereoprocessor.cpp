@@ -42,6 +42,7 @@
  * ------------------------------------------------------------------------- */
 
 #include "stereoprocessor.h"
+#include <limits>
 
 #define DEBUG
 
@@ -415,7 +416,7 @@ void StereoProcessor::subpixelEnhancement()
 Mat StereoProcessor::cost2disparity(int imageNo)
 {
     Mat disp(imgSize, CV_32S);
-    Mat lowCost(imgSize, COST_MAP_TYPE, Scalar(numeric_limits<costType>::max()));
+    Mat lowCost(imgSize, COST_MAP_TYPE, Scalar(std::numeric_limits<costType>::max()));
 
     for(int d = 0; d <= dMax - dMin; d++)
     {
