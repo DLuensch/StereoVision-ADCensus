@@ -10,6 +10,7 @@
  * Developer		: 	Dennis Luensch 		(dennis.luensch@gmail.com)
 						Tom Marvin Liebelt	(fh@tom-liebelt.de)
 						Christian Blesing	(christian.blesing@gmail.com)
+						Gregory Kramida     (algomorph@gmail.com
  * License 			: 	BSD 
  *
  * Copyright (c) 2014, Dennis Lünsch, Tom Marvin Liebelt, Christian Blesing
@@ -42,6 +43,8 @@
  * ------------------------------------------------------------------------- */
 
 #include "sgblockmatching.h"
+
+#if defined(CV_VERSION_EPOCH) || (CV_VERSION_MAJOR < 3)
 
 SGBlockMatching::SGBlockMatching()
 {
@@ -83,6 +86,56 @@ void SGBlockMatching::SetSpeckleRange(int value)
     this->sgbm.speckleRange = value;
 }
 
+void SGBlockMatching::calcP()
+{
+    this->sgbm.P1 = 8 * imageLeft.channels() * this->sgbm.SADWindowSize * this->sgbm.SADWindowSize;
+    this->sgbm.P1 = 32 * imageLeft.channels() * this->sgbm.SADWindowSize * this->sgbm.SADWindowSize;
+}
+#else
+SGBlockMatching::SGBlockMatching():sgbm(cv::StereoSGBM::create(0,256,9,0,0,1,63))
+{
+    this->sgbm->setMode(cv::StereoSGBM::MODE_SGBM);
+}
+
+void SGBlockMatching::SetMinDisparity(int value)
+{
+    this->sgbm->setMinDisparity(value);
+}
+
+void SGBlockMatching::SetSADWindowSize(int value)
+{
+    this->sgbm->setBlockSize(value);
+
+    this->calcP();
+}
+
+void SGBlockMatching::SetNumberOfDisparities(int value)
+{
+    this->sgbm->setNumDisparities(value);
+}
+
+void SGBlockMatching::SetUniquenessRatio(int value)
+{
+    this->sgbm->setUniquenessRatio(value);
+}
+
+void SGBlockMatching::SetSpeckleWindowSize(int value)
+{
+    this->sgbm->setSpeckleWindowSize(value);
+}
+
+void SGBlockMatching::SetSpeckleRange(int value)
+{
+    this->sgbm->setSpeckleRange(value);
+}
+
+void SGBlockMatching::calcP()
+{
+    this->sgbm->setP1(8 * imageLeft.channels() * this->sgbm->getBlockSize() * this->sgbm->getBlockSize());
+    this->sgbm->setP2(32 * imageLeft.channels() * this->sgbm->getBlockSize() * this->sgbm->getBlockSize());
+}
+#endif
+
 void SGBlockMatching::setImages(cv::Mat &imageLeft, cv::Mat &imageRight)
 {
     this->imageLeft = imageLeft.clone();
@@ -91,17 +144,11 @@ void SGBlockMatching::setImages(cv::Mat &imageLeft, cv::Mat &imageRight)
     this->calcP();
 }
 
-void SGBlockMatching::calcP()
-{
-    this->sgbm.P1 = 8 * imageLeft.channels() * this->sgbm.SADWindowSize * this->sgbm.SADWindowSize;
-    this->sgbm.P1 = 32 * imageLeft.channels() * this->sgbm.SADWindowSize * this->sgbm.SADWindowSize;
-}
-
 Mat SGBlockMatching::updateSGBM()
 {
     Mat res, res8;
 
-    this->sgbm(this->imageLeft, this->imageRight, res);
+    this->sgbm->compute(this->imageLeft, this->imageRight, res);
 
     res.convertTo(res8, CV_8U, 1 / 16.);
 

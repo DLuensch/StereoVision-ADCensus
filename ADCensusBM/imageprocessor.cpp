@@ -42,6 +42,7 @@
  * ------------------------------------------------------------------------- */
 
 #include "imageprocessor.h"
+#include <limits>
 
 ImageProcessor::ImageProcessor(float percentageOfDeletion)
 {
@@ -51,10 +52,10 @@ ImageProcessor::ImageProcessor(float percentageOfDeletion)
 Mat ImageProcessor::stretchHistogram(Mat image)
 {
     Size imgSize = image.size();
-    vector<Mat> channels;
+    std::vector<Mat> channels;
     Mat output(imgSize, CV_8UC3);
     uint pixelThres = percentageOfDeletion * imgSize.height * imgSize.width;
-    vector<uint> hist;
+    std::vector<uint> hist;
     hist.resize(std::numeric_limits<uchar>::max() + 1);
 
 
@@ -126,7 +127,7 @@ Mat ImageProcessor::stretchHistogram(Mat image)
     return output;
 }
 
-Mat ImageProcessor::unsharpMasking(Mat image, string blurMethod, int kernelSize, float alpha, float beta)
+Mat ImageProcessor::unsharpMasking(Mat image, std::string blurMethod, int kernelSize, float alpha, float beta)
 {
     Mat tempImage, output;
     float gamma = 0.0;

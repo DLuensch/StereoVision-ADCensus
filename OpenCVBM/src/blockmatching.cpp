@@ -10,6 +10,7 @@
  * Developer		: 	Dennis Luensch 		(dennis.luensch@gmail.com)
 						Tom Marvin Liebelt	(fh@tom-liebelt.de)
 						Christian Blesing	(christian.blesing@gmail.com)
+						Gregory Kramida     (algomorph@gmail.com)
  * License 			: 	BSD 
  *
  * Copyright (c) 2014, Dennis Lünsch, Tom Marvin Liebelt, Christian Blesing
@@ -44,6 +45,7 @@
 #include "blockmatching.h"
 #include <iostream>
 
+#if defined(CV_VERSION_EPOCH) || (CV_VERSION_MAJOR < 3)
 BlockMatching::BlockMatching()
 {
     this->bm = StereoBM(StereoBM::BASIC_PRESET, 64, 21);
@@ -94,6 +96,61 @@ void BlockMatching::SetSpeckleRange(int value)
 {
     this->bm.state->speckleRange = value;
 }
+#else
+//==================== OPENCV 3 ====================================================================
+BlockMatching::BlockMatching()
+{
+    this->bm = cv::StereoBM::create(64, 21);
+    this->bm->setDisp12MaxDiff(1);
+}
+
+void BlockMatching::SetPreFilterCap(int value)
+{
+    this->bm->setPreFilterCap(value);
+}
+
+void BlockMatching::SetPreFilterSize(int value)
+{
+    this->bm->setPreFilterSize(value);
+}
+
+void BlockMatching::SetMinDisparity(int value)
+{
+    this->bm->setMinDisparity(value);
+}
+
+void BlockMatching::SetSADWindowSize(int value)
+{
+    this->bm->setBlockSize(value);
+}
+
+void BlockMatching::SetNumberOfDisparities(int value)
+{
+    this->bm->setNumDisparities(value);
+}
+
+void BlockMatching::SetTextureThreshold(int value)
+{
+    this->bm->setTextureThreshold(value);
+}
+
+void BlockMatching::SetUniquenessRatio(int value)
+{
+    this->bm->setUniquenessRatio(value);
+}
+
+void BlockMatching::SetSpeckleWindowSize(int value)
+{
+    this->bm->setSpeckleWindowSize(value);
+}
+
+void BlockMatching::SetSpeckleRange(int value)
+{
+    this->bm->setSpeckleRange(value);
+}
+
+#endif
+
 
 void BlockMatching::setImages(cv::Mat &imageLeft, cv::Mat &imageRight)
 {
@@ -105,7 +162,7 @@ Mat BlockMatching::updateBM()
 {
     Mat res, res8;
 
-    this->bm(this->imageLeft, this->imageRight, res);
+    this->bm->compute(this->imageLeft, this->imageRight, res);
 
     res.convertTo(res8, CV_8U, 1 / 16.);
 

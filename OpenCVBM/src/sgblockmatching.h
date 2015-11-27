@@ -10,6 +10,7 @@
  * Developer		: 	Dennis Luensch 		(dennis.luensch@gmail.com)
 						Tom Marvin Liebelt	(fh@tom-liebelt.de)
 						Christian Blesing	(christian.blesing@gmail.com)
+						Gregory Kramida     (algomorph@gmail.com)
  * License 			: 	BSD 
  *
  * Copyright (c) 2014, Dennis Lünsch, Tom Marvin Liebelt, Christian Blesing
@@ -74,8 +75,11 @@ public:
 
 private:
 
+#if defined(CV_VERSION_EPOCH) || (CV_VERSION_MAJOR < 3)
     StereoSGBM sgbm;
-
+#else
+    cv::Ptr<StereoSGBM> sgbm;
+#endif
     cv::Mat imageLeft;
 
     cv::Mat imageRight;

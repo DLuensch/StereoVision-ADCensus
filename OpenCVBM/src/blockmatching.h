@@ -80,8 +80,11 @@ public:
 
 private:
 
+#if defined(CV_VERSION_EPOCH) || (CV_VERSION_MAJOR < 3)
     StereoBM bm;
-
+#else
+    cv::Ptr<StereoBM> bm;
+#endif
     cv::Mat imageLeft;
 
     cv::Mat imageRight;
