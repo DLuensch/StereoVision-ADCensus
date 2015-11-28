@@ -535,7 +535,7 @@ void OpenCVBMWindow::slot_quit()
     this->close();
 }
 
-void OpenCVBMWindow::setSavePath(string path)
+void OpenCVBMWindow::setSavePath(std::string path)
 {
     this->savePath = path;
 }

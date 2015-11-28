@@ -53,7 +53,7 @@ class ImageProcessor
 public:
     ImageProcessor(float percentageOfDeletion);
     Mat stretchHistogram(Mat image);
-    Mat unsharpMasking(Mat image, string blurMethod, int kernelSize, float alpha, float beta);
+    Mat unsharpMasking(Mat image, std::string blurMethod, int kernelSize, float alpha, float beta);
     Mat laplacianSharpening(Mat image, int kernelSize, float alpha, float beta);
 private:
     float percentageOfDeletion;
