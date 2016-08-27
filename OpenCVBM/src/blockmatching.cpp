@@ -162,8 +162,11 @@ Mat BlockMatching::updateBM()
 {
     Mat res, res8;
 
+#if defined(CV_VERSION_EPOCH) || (CV_VERSION_MAJOR < 3)
+    this->bm(this->imageLeft, this->imageRight, res);
+#else // opencv3
     this->bm->compute(this->imageLeft, this->imageRight, res);
-
+#endif
     res.convertTo(res8, CV_8U, 1 / 16.);
 
     return res8;
